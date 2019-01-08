@@ -1,0 +1,24 @@
+SubDir TOP elua ;
+
+TargetDirectory ;
+
+SubDirHdrs /opt/include ;
+SubDirHdrs /usr/include/g++-v3 ;
+SubDirHdrs /usr/include/g++-v3/i386-linux ;
+
+Main <elua>elua :
+  elua.cpp
+  unit.cpp
+  block.cpp
+  parser.cpp
+  report.cpp
+  region.cpp
+  crobject.cpp
+  hierarchy.cpp
+  ;
+
+LinkLibraries <elua>elua : crtools ;
+LINK on <elua>elua = $(C++) ;
+LINKLIBS on <elua>elua +=
+   -L/opt/lib -llua -llualib -lm
+   ;

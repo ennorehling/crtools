@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<block name="VERSION">
+ <block name="BATTLE">
+  <block name="MESSAGE"/>
+ </block>
+ <block name="MESSAGETYPE"/>
+ <block name="ISLAND"/>
+ <block name="TRANSLATION"/>
+ <block name="MESSAGETYPES"/>
+ <block name="REGION">
+  <block name="SCHEMEN"/>
+  <block name="BORDER"/>
+  <block name="GRENZE"/>
+  <block name="LETZTEPREISE"/>
+  <block name="RESOURCE"/>
+  <block name="EINHEIT">
+   <block name="EFFECTS"/>
+   <block name="COMMANDS"/>
+   <block name="GEGENSTAENDE"/>
+   <block name="SPRUECHE"/>
+   <block name="KAMPFZAUBER"/>
+   <block name="EINHEITSBOTSCHAFTEN"/>
+   <block name="TALENTE"/>
+  </block>
+  <block name="BURG">
+   <block name="EFFECTS"/>
+  </block>
+  <block name="REGIONSKOMMENTAR"/>
+  <block name="REGIONSBOTSCHAFTEN"/>
+  <block name="UMGEBUNG"/>
+  <block name="REGIONSEREIGNISSE"/>
+  <block name="DURCHREISE"/>
+  <block name="DURCHSCHIFFUNG"/>
+  <block name="SCHIFF"/>
+  <block name="PREISE"/>
+  <block name="EFFECTS"/>
+  <block name="MESSAGE"/>
+ </block>
+ <block name="TRANK"/>
+ <block name="ADRESSE"/>
+ <block name="SPRUCH"/>
+ <block name="PARTEI">
+  <block name="GEGENSTAENDE"/>
+  <block name="GRUPPE"/>
+  <block name="COMMENTS"/>
+  <block name="ADRESSEN"/>
+  <block name="ALLIIERTE"/>
+  <block name="ALLIANZ"/>
+  <block name="BEWEGUNGEN"/>
+  <block name="PRODUKTION"/>
+  <block name="HANDEL"/>
+  <block name="EINKOMMEN"/>
+  <block name="EREIGNISSE"/>
+  <block name="MELDUNGEN"/>
+  <block name="MESSAGE"/>
+  <block name="OPTIONEN"/>
+ </block>
+ <block name="TRAENKE"/>
+ <block name="ZAUBER">
+  <block name="KOMPONENTEN"/>
+ </block>
+</block>

@@ -1,0 +1,50 @@
+SubDir TOP ;
+TargetDirectory ;
+
+SubDirHdrs $(XMLHDRS) ;
+
+Library crtools : 
+  crparse.c 
+  hierarchy.c
+  conversion.c
+  command.c 
+  crdata.c
+  origin.c 
+  ;
+
+Main eformat : eformat.c ;
+LinkLibraries eformat : crtools ;
+
+Main crimage : crimage.c image.c ;
+LinkLibraries crimage : crtools ;
+LINKLIBS on crimage += -lpng ;
+
+Main cr2xml : cr2xml.c ;
+LinkLibraries cr2xml : crtools ;
+libiconv cr2xml ;
+libxml2 cr2xml ;
+
+Main cr2html : cr2html.c ;
+LinkLibraries cr2html : crtools ;
+
+Main crmerian : crmerian.c ;
+LinkLibraries crmerian : crtools ;
+
+Main crmerge : crmerge.c ;
+LinkLibraries crmerge : crtools ;
+
+Main crstrip : crstrip.c ;
+LinkLibraries crstrip : crtools ;
+
+Main crmerian : craddress.c ;
+LinkLibraries craddress : crtools ;
+
+Main crcutter : crcutter.c ;
+LinkLibraries crcutter : crtools ;
+
+Main eva : eva.c evadata.c ;
+LinkLibraries eva : crtools ;
+LINKLIBS on eva += -lncurses ;
+
+# SubInclude TOP elua ;
+

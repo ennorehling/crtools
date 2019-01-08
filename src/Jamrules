@@ -1,0 +1,67 @@
+if ! $(DISTCC_HOSTS) {
+} else {
+  CC = distcc $(CC) ;
+  C++ = distcc $(C++) ;
+  Echo Compiling with distcc ;
+}
+      
+if ! $(CCACHE_DIR) {
+} else {
+  CC = ccache $(CC) ;
+  C++ = ccache $(C++) ;
+  Echo Compiling with ccache ;
+}
+
+CC = gcc ;
+C++ = g++ ;
+
+CCFLAGS += -Wall ;
+C++FLAGS += -Wall -ftemplate-depth-50 ;
+
+XMLHDRS = /usr/include/libxml2 ;
+
+rule libiconv
+{
+  if $(LINK_ICONV) {
+    LINKLIBS on $(<) += -liconv ;
+  }
+}
+
+rule libxml2
+{
+  LINKLIBS on $(<) += -lxml2 ;
+}
+
+rule TargetDirectory
+{
+        # Now set up SEARCH_SOURCE, LOCATE_TARGET, SOURCE_GRIST
+        # These can be reset if needed.  For example, if the source
+        # directory should not hold object files, LOCATE_TARGET can
+        # subsequently be redefined.
+
+        local path = [ FDirName $(SUBDIR) $(TARGET_PREFIX) ] ;
+        SEARCH_SOURCE = $(SUBDIR) ;
+        LOCATE_SOURCE = $(ALL_LOCATE_TARGET) $(path) ;
+        LOCATE_TARGET = $(ALL_LOCATE_TARGET) $(path) ;
+        SOURCE_GRIST = $(path) ;
+        if $(DEBUG) = 1 {
+            SubDirCcFlags -g ;
+            SubDirC++Flags -g ;
+        }
+        else {
+            SubDirCcFlags -DNDEBUG -O3 ;
+            SubDirC++Flags -DNDEBUG -O3 ;
+        }       
+}
+
+if ! $(DEBUG) {
+   ECHO Assuming DEBUG=1 ;
+   DEBUG = 1 ;
+}
+        
+if $(DEBUG) = 0 {
+   TARGET_PREFIX = Release ;
+}
+else {
+   TARGET_PREFIX = Debug ;
+}

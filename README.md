@@ -1,9 +1,9 @@
 # crtools
 Ancient eressea tools for the command line.
-crtools -- Tools zur Bearbeitung von Computerreports für Eressea und
-verwandte PBeMs (Verdanon, Empiria)
 
-Eressea ist ein email-Spiel (http://eressea-pbem.de/). Die wöchentliche
+## Tools zur Bearbeitung von Computerreports fÃ¼r Eressea und verwandte PBeMs (Verdanon, Empiria)
+
+Eressea ist ein email-Spiel (https://www.eressea.de/). Die wÃ¶chentliche
 Auswertung des Spieles kann man in einem Computerlesbaren Format erhalten,
 dem CR. Diese CR zu verwalten und zu modifizieren ist Aufgabe dieser
 Toolsammlung.
@@ -24,8 +24,8 @@ zum einfachen Import ins Adressbuch eines Mailtools (z.B. Outlook Express)
 	          a cr-file. if none specified, read from stdin
 
 crcutter:
-Schneidet aus einem großen CR einen Ausschnitt heraus, zum
-Beispiel eine einzelne Insel. Dabei bleiben sämtliche Informationen des
+Schneidet aus einem groÃŸen CR einen Ausschnitt heraus, zum
+Beispiel eine einzelne Insel. Dabei bleiben sÃ¤mtliche Informationen des
 Ausschnitts erhalten, auch "unbekannte" Attribute.
 	usage: crcutter [options] [infiles]
 	options:
@@ -42,8 +42,8 @@ Ausschnitts erhalten, auch "unbekannte" Attribute.
 
 crmerge:
 Ist in der Lage, mehrere Computerreports miteinander zu verbinden. So kann
-man z.B. für eine Allianz einen "gemeinsamen" CR erstellen, Karten
-zusammenfügen, den eigenen CR mit einer Karte erweitern, uvm.
+man z.B. fÃ¼r eine Allianz einen "gemeinsamen" CR erstellen, Karten
+zusammenfÃ¼gen, den eigenen CR mit einer Karte erweitern, uvm.
 	usage: crmerge [options] [infiles]
 	options:
 	 -h       display this information
@@ -55,12 +55,12 @@ zusammenfügen, den eigenen CR mit einer Karte erweitern, uvm.
 	 one or more cr-files. if none specified, read from stdin
 
 crstrip
-Reduziert einen Computerreport auf eine Teilmenge von Blöcken und
-Attributen. Enorm praktisch, wenn man Verbündeten oder anderen Spielern nur
+Reduziert einen Computerreport auf eine Teilmenge von BlÃ¶cken und
+Attributen. Enorm praktisch, wenn man VerbÃ¼ndeten oder anderen Spielern nur
 einen Teil der Informationen zukommen lassen will (also z.B. nur
 Karteninfos, oder die Einheiten ohne ihre Befehle oder Talentwerte). Liest
 und schreibt alle denkbaren Konfigurationen von CRs.
-Die Datei map.crf Enthält eine Beispiel-Filterdatei für Landkarten.
+Die Datei map.crf EnthÃ¤lt eine Beispiel-Filterdatei fÃ¼r Landkarten.
 	usage: crstrip [options] [infile]
 	options:
 	 -h       display this information
@@ -71,7 +71,7 @@ Die Datei map.crf Enthält eine Beispiel-Filterdatei für Landkarten.
 	          a cr-file. if none specified, read from stdin
 
 crmerian
-Erzeugt aus einem Computerreport eine ASCII-Karte, wie sie früher auch vom Eressea-Server geliefert wurde.
+Erzeugt aus einem Computerreport eine ASCII-Karte, wie sie frÃ¼her auch vom Eressea-Server geliefert wurde.
 	usage: crmerian [options] [infiles]
 	options:
 	 -h       display this information
@@ -83,8 +83,8 @@ Erzeugt aus einem Computerreport eine ASCII-Karte, wie sie früher auch vom Eress
 
 crimage
 Erzeugt eine PNG-karte mit Beschriftungen und koordinaten. Es werden 
-Grafiken wie für mercator benötigt, und zusätzlich eine Datei mit der
-Schrift. Ein Beispiel ist erhältlich auf 
+Grafiken wie fÃ¼r mercator benÃ¶tigt, und zusÃ¤tzlich eine Datei mit der
+Schrift. Ein Beispiel ist erhÃ¤ltlich auf 
 http://pegasus.uni-paderborn.de/crtools/crimage-uni.zip
 	usage: crimage [options] [infile]
 	options:
@@ -98,7 +98,7 @@ http://pegasus.uni-paderborn.de/crtools/crimage-uni.zip
 	          a cr-file. if none specified, read from stdin
 
 eformat
-Formatiert Befehlsdateien neu. Beispielsweise werden Kommentare entfernt, Befehle ausgeschrieben, und angegebene Zeilenlängen eingehalten.
+Formatiert Befehlsdateien neu. Beispielsweise werden Kommentare entfernt, Befehle ausgeschrieben, und angegebene ZeilenlÃ¤ngen eingehalten.
 	usage: eformat [options] [infile]
 	options:
 	 -h       display this information
@@ -113,7 +113,7 @@ Formatiert Befehlsdateien neu. Beispielsweise werden Kommentare entfernt, Befehl
 	          a command template. if none specified, read from stdin
 
 eva
-Ein visueller Mini-Client, der CR-Dateien anzeigen kann. Benötigt pdcurses
+Ein visueller Mini-Client, der CR-Dateien anzeigen kann. BenÃ¶tigt pdcurses
 oder ncurses.
 	usage: eva [options] [infile]
 	options:
@@ -138,16 +138,18 @@ Diese Tools haben eine Homepage auf <http://ennos.home.pages.de/tools/>.
 Enno Rehling
 enno@eressea.de
 http://ennos.home.pages.de/
-crtools - Eine Anleitung für Programmierer
+
+
+## Anleitung fÃ¼r Programmierer
 
 1. Einleitung
 
-Mindestens zwei Dutzend Parser sind schon für das Eressea-Datenformat geschreiben
+Mindestens zwei Dutzend Parser sind schon fÃ¼r das Eressea-Datenformat geschreiben
 worden. Jeder hat die eine oder andere Macke. Damit der Wahnsinn mal ein Ende hat,
-sind die crtools open source: Jeder darf den Code daraus für seine eigenen Tools
-benutzen, insbesondere den Parser, solange er sich an die GPL hält.
+sind die crtools open source: Jeder darf den Code daraus fÃ¼r seine eigenen Tools
+benutzen, insbesondere den Parser, solange er sich an die GPL hÃ¤lt.
 
-Weil man mir nachsagt, mein Code sei nicht gut lesbar, muß ich wohl eine Doku
+Weil man mir nachsagt, mein Code sei nicht gut lesbar, muÃŸ ich wohl eine Doku
 schreiben. Das mit der Lesbarkeit hat IMHO nichts mit dem Code, sondern der Art,
 wie ich beim coden denke, zu tun. Wenn man das einmal kapiert, kann man das auch
 lesen, da bin ich sicher. Nun denn...
@@ -156,65 +158,63 @@ lesen, da bin ich sicher. Nun denn...
 2. Module
 
 Wichtigster Teil des Paketes ist das crparse Modul. Da steckt der Parser drin,
-und zumindest dieser Teil ist für _jedes_ Tool das Du schreibst, zu gebrauchen.
+und zumindest dieser Teil ist fÃ¼r _jedes_ Tool das Du schreibst, zu gebrauchen.
 Es ist rattenschnell: 6,7 MB oder 333.000 Zeilen gehen da auf meinem P100 in nur
 einer Sekunde durch.
 Benutzt wird es, indem man ein paar Callback-Funktionen schreibt, die dem Parser
 sagen, wie ein Block aussehen soll, oder wie man einem Block ein neues Attribut
-zufügt. Der Parser ist so geschrieben, das er unabhängig von der Art, wie du
+zufÃ¼gt. Der Parser ist so geschrieben, das er unabhÃ¤ngig von der Art, wie du
 deine Daten im Speicher organisierst, funktioniert. Du kannst also deine Daten
-in einer Datenbank ablegen, in C++ Objekten, oder wenn Du willst auch überhaupt
+in einer Datenbank ablegen, in C++ Objekten, oder wenn Du willst auch Ã¼berhaupt
 nicht (siehe unten, crstrip).
 
-Das zweite Modul ist crdata. Anders als crparse muß man es nicht benutzen.
-crdata enthält die o.g. Callbacks für ein sehr einfaches aber dafür vollständiges
-Modell der Datenspeicherung, die nicht für jeden Client geeignet ist. Beispiele,
+Das zweite Modul ist crdata. Anders als crparse muÃŸ man es nicht benutzen.
+crdata enthÃ¤lt die o.g. Callbacks fÃ¼r ein sehr einfaches aber dafÃ¼r vollstÃ¤ndiges
+Modell der Datenspeicherung, die nicht fÃ¼r jeden Client geeignet ist. Beispiele,
 in denen crdata verwendet wird, sind crmerge und crcutter. Beispiele, in denen
 ein eigenes Datenmodell verwendet wird, sind crimage und crmerian. Ein Beispiel,
 das ganz ohne Datenspeicherung auskommt, ist crstrip, wo die Callback-Funktionen
 die eingelesenen Werte entweder ignorieren, oder sofort wieder in die Ausgabe
-schreiben. Verwendet man crdata, so hat man die Gewißheit, das alle eingelesenen
-Daten auch zur Verwendung stehen, unabhängig vom Inhalt oder der verwendeten
+schreiben. Verwendet man crdata, so hat man die GewiÃŸheit, das alle eingelesenen
+Daten auch zur Verwendung stehen, unabhÃ¤ngig vom Inhalt oder der verwendeten
 Version des CR.
 
 2.1 Benutzung von crparse
 
-Lies erst einmal nur crparse.h - versuch nicht, crparse.c zu verstehen, für die
-Benutzung hilft dir das nämlich garnichts. In crparse.h gibt es nur eine einzige
+Lies erst einmal nur crparse.h - versuch nicht, crparse.c zu verstehen, fÃ¼r die
+Benutzung hilft dir das nÃ¤mlich garnichts. In crparse.h gibt es nur eine einzige
 Funktion:
 	void cr_parse(parse_info * info, FILE * in);
 Nach dem Aufruf dieser Funktion ist das Datenfile 'in' eingelesen worden. In der
 Struktur parse_info steht, wie das genau von statten gehen soll. Vor allem wichtig
-sind diese beiden Einträge:
+sind diese beiden EintrÃ¤ge:
 	const block_interface * iblock;
 	const report_interface * ireport;
-Diese Interfaces beschreiben, was der Parser mit gefundenen Blöcken und Attributen
+Diese Interfaces beschreiben, was der Parser mit gefundenen BlÃ¶cken und Attributen
 tun soll. Betrachten wir zuerst report_interface genauer:
 	block_t (*create)(context_t context, const char * name, const int * ids, size_t size);
 	void (*destroy)(context_t context, block_t block);
 	void (*add)(context_t context, block_t block);
 	block_t (*find)(context_t context, const char * name, const int * ids, size_t size);
 Diese vier Funktionen sollst _du_ implementieren. Der Parser ruft sie jedesmal auf,
-wenn es nötig ist. Beispiel gefällig? Nehmen wir an, wir wollen ein Programm,
+wenn es nÃ¶tig ist. Beispiel gefÃ¤llig? Nehmen wir an, wir wollen ein Programm,
 das zu einem eingelesenen CR nur die Blocks ohne Attribute ausgibt.
 
----- begin sample1.c
-block_t
-print_create(context_t context, const char * name, const int * ids, size_t size) {
+    block_t
+    print_create(context_t context, const char * name, const int * ids, size_t size) {
 	unsigned int i;
 	puts(name);
 	for (i=0;i!=size;++i) printf(" %d", ids[i]);
 	putc('\n');
-}
+    }
 
-report_interface bci =
+    report_interface bci =
 	{ print_create, NULL, NULL, NULL };
-block_interface bi =
+    block_interface bi =
 	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL };
 
-int
-main()
-{
+    int main()
+    {
 	parse_info pi;
 
 	pi.iblock = &bi;
@@ -222,10 +222,9 @@ main()
 
 	cr_parse(&pi, stdin);
 	return 0;
-}
----- end sample1.c
+    }
 
-<to be continued on a rainy day>
+ ... to be continued on a rainy day.
 
 
 Enno

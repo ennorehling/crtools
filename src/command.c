@@ -32,7 +32,7 @@ getbuf(FILE * F)
     else {
       fprintf(stderr, "warning, line too long: %.20s[...]\n", lbuf);
       while (bp && !lbuf[MAXLINE-1] && lbuf[MAXLINE-2]!='\n') {
-        /* wenn die zeile l‰nger als erlaubt war,
+        /* wenn die zeile l√§nger als erlaubt war,
          * wird der rest weggeworfen: */
         bp = (unsigned char *)fgets(buf, 1024, F);
       }

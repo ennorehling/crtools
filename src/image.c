@@ -348,7 +348,7 @@ image_read(image * pic, FILE * f)
   if (color_type == PNG_COLOR_TYPE_PALETTE)
     png_set_expand(png_ptr);
   if (color_type == PNG_COLOR_TYPE_GRAY) {
-    fprintf(stderr, "grayscale nicht unterstützt\n");
+    fprintf(stderr, "grayscale nicht unterstÃ¼tzt\n");
     exit(1);
   }
   if (png_get_valid(png_ptr, info_ptr, PNG_INFO_tRNS))
@@ -425,7 +425,7 @@ image_write(image * pic, FILE * f)
   png_set_sBIT(png_ptr, info_ptr, &sig_bit);
   png_set_gAMA(png_ptr, info_ptr, 0.6);
   /*
-   * Hier könnte man Text-Chunks schreiben.
+   * Hier kÃ¶nnte man Text-Chunks schreiben.
    * Bild-Info in Datei schreiben.
    */
   png_write_info(png_ptr, info_ptr);

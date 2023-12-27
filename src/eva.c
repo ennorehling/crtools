@@ -258,14 +258,14 @@ info_paint(window * w, evadata * data, state * st)
   unused(st);
 
   werase(win);
-  mvwaddnstr(win, line++, 1, "Tastenkürzel:", size);
+  mvwaddnstr(win, line++, 1, "TastenkÃ¼rzel:", size);
   line++;
-  mvwaddnstr(win, line++, 1, "u U : Suche Einheit/Nächste ", size);
+  mvwaddnstr(win, line++, 1, "u U : Suche Einheit/NÃ¤chste ", size);
   mvwaddnstr(win, line++, 1, "+ - : Einheit wechseln      ", size);
   mvwaddnstr(win, line++, 1, "p P : Ebene wechseln        ", size);
   mvwaddnstr(win, line++, 1, "c   : Palette wechseln      ", size);
-  mvwaddnstr(win, line++, 1, "/ n : Suche Region/Nächste  ", size);
-  mvwaddnstr(win, line++, 1, "g b : Gehe zu/zurück        ", size);
+  mvwaddnstr(win, line++, 1, "/ n : Suche Region/NÃ¤chste  ", size);
+  mvwaddnstr(win, line++, 1, "g b : Gehe zu/zurÃ¼ck        ", size);
   mvwaddnstr(win, line++, 1, "?   : Hilfe                 ", size);
   mvwaddnstr(win, line++, 1, "t T : Markierungen/Auswahl  ", size);
   mvwaddnstr(win, line++, 1, "v   : Ansicht wechseln      ", size);
@@ -317,9 +317,9 @@ detail_paint(window * w, evadata * data, state * st)
     line=3;
     if (crwgeti(r->super, "pferde", -1)>=0 || crwgeti(r->super, "baeume", -1)>=0) {
 #if HAVE_SNPRINTF
-      snprintf(buffer, size, "%d Pferde, %d Bäume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
+      snprintf(buffer, size, "%d Pferde, %d BÃ¤ume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
 #else
-      sprintf(buffer, "%d Pferde, %d Bäume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
+      sprintf(buffer, "%d Pferde, %d BÃ¤ume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
       buffer[size]=0;
 #endif
       mvwaddnstr(win, line++, 1, buffer, size);
@@ -436,9 +436,9 @@ unit_paint(window * w, evadata * data, state * st)
     line=3;
     if (crwgeti(r->super, "pferde", -1)>=0 || crwgeti(r->super, "baeume", -1)>=0) {
 #if HAVE_SNPRINTF
-      snprintf(buffer, size, "%d Pferde, %d Bäume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
+      snprintf(buffer, size, "%d Pferde, %d BÃ¤ume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
 #else
-      sprintf(buffer, "%d Pferde, %d Bäume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
+      sprintf(buffer, "%d Pferde, %d BÃ¤ume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
       buffer[size]=0;
 #endif
       mvwaddnstr(win, line++, 1, buffer, size);
@@ -531,9 +531,9 @@ region_paint(window * w, evadata * data, state * st)
     line=3;
     if (crwgeti(r->super, "pferde", -1)>=0 || crwgeti(r->super, "baeume", -1)>=0) {
 #if HAVE_SNPRINTF
-      snprintf(buffer, size, "%d Pferde, %d Bäume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
+      snprintf(buffer, size, "%d Pferde, %d BÃ¤ume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
 #else
-      sprintf(buffer, "%d Pferde, %d Bäume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
+      sprintf(buffer, "%d Pferde, %d BÃ¤ume", crwgeti(r->super, "pferde", -1), crwgeti(r->super, "baeume", -1));
       buffer[size]=0;
 #endif
       mvwaddnstr(win, line++, 1, buffer, size);
@@ -1298,7 +1298,7 @@ main(int argc, char ** argv)
 
   get_terrain(&data->terrains, "Ozean")->tile = '.';
   get_terrain(&data->terrains, "Ebene")->tile = '+';
-  get_terrain(&data->terrains, "Wüste")->tile = 'D';
+  get_terrain(&data->terrains, "WÃ¼ste")->tile = 'D';
   get_terrain(&data->terrains, "Wueste")->tile = 'D';
 
   while (i!=argc) {

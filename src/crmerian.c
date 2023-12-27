@@ -281,7 +281,7 @@ const report_interface merian_ireport = {
 
 terrain *
 get_terrain(const char * cp, char defsymbol, char marker) {
-  char * symbols = "§$%&*=@~";
+  char * symbols = "Â§$%&*=@~";
   static char * sym = NULL;
   terrain * t;
   const char * symbol = cp;
@@ -370,7 +370,7 @@ main(int argc, char ** argv)
   get_terrain("Wald", 'w', 'W');
   get_terrain("Sumpf", 's', 'S');
   get_terrain("Ozean", '.', '*');
-  get_terrain("Wüste", 'd', 'D');
+  get_terrain("WÃ¼ste", 'd', 'D');
   get_terrain("Ebene", 'e', 'E');
   get_terrain("Feuerwand", '#', '#');
 

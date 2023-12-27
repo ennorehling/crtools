@@ -313,7 +313,7 @@ translate(const token_t * tokens)
           }
         }
         if (!nextc || nextc->tokens[i] || tokens[i]) {
-          /* Einheit hat die Prüfung nicht bestanden. */
+          /* Einheit hat die PrÃ¼fung nicht bestanden. */
           command * c;
           for (c=lastu->commands;c!=nextc;c=c->next) {
             printout(printcmd(c->tokens));

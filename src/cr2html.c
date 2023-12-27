@@ -72,20 +72,20 @@ htmlstring(const char * s) {
   {
     { '<', "&lt;" },
     { '>', "&gt;" },
-    { 'ä', "&auml;" },
-    { 'ö', "&ouml;" },
-    { 'ü', "&uuml;" },
-    { 'ß', "&szlig;" },
-    { 'Ä', "&Auml;" },
-    { 'Ö', "&Ouml;" },
-    { 'Ü', "&Uuml;" },
+    // { 'Ã¤', "&auml;" },
+    // { 'Ã¶', "&ouml;" },
+    // { 'Ã¼', "&uuml;" },
+    // { 'ÃŸ', "&szlig;" },
+    // { 'Ã„', "&Auml;" },
+    // { 'Ã–', "&Ouml;" },
+    // { 'Ãœ', "&Uuml;" },
     { '=', "&eq;" },
     { '&', "&amp;" },
     { 0, NULL },
-    { 'é', "e" },
-    { 'ó', "o" },
-    { 'ú', "u" },
-    { 'á', "a" },
+    // { 'Ã©', "e" },
+    // { 'Ã³', "o" },
+    // { 'Ãº', "u" },
+    // { 'Ã¡', "a" },
     { 0, NULL },
   };
   buffer_type buffer[MAXBUF];
@@ -173,7 +173,7 @@ html_write(crdata * data, FILE * out)
     fprintf(out, "<h2>%s (%d,%d), %s</h2>\n",
       name, r->ids[0], r->ids[1], terrain);
     fputs("<p>", out);
-    if (!tags->get_int(data, r, "baeume", &trees) && trees) fprintf(out, "%d Bäume, ", trees);
+    if (!tags->get_int(data, r, "baeume", &trees) && trees) fprintf(out, "%d BÃ¤ume, ", trees);
     if (!tags->get_int(data, r, "laen", &laen)) fprintf(out, "%d Laen, ", laen);
     if (!tags->get_int(data, r, "pferde", &horses) && horses) fprintf(out, "%d Pferde, ", horses);
     if (!tags->get_int(data, r, "eisen", &iron) && iron) fprintf(out, "%d Eisen, ", iron);
@@ -206,7 +206,7 @@ html_write(crdata * data, FILE * out)
             tags->get_string(data, b, "name", &name);
             tags->get_string(data, b, "typ", &type);
             tags->get_int(data, b, "groesse", &size);
-            fprintf(out, "<li>%s (%d), %s, Größe %d\n", name, building, type, size);
+            fprintf(out, "<li>%s (%d), %s, GrÃ¶ÃŸe %d\n", name, building, type, size);
             fputs("<ul>\n", out);
             do {
               b = b->next;
